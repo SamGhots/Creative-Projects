@@ -1,0 +1,101 @@
+/* สไตล์สำหรับ popup */
+.popup {
+  display: none; /* ซ่อน popup โดยเริ่มต้น */
+  position: fixed; /* อยู่ตำแหน่งที่แน่นอน */
+  z-index: 1000; /* อยู่บนสุด */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* เลื่อนถ้าจำเป็น */
+  background-color: rgb(0,0,0); /* สีพื้นหลังกรณีที่เบราว์เซอร์ไม่รองรับ rgba */
+  background-color: rgba(15, 22, 27, 0.8); /* สีพื้นหลังดำโปร่งแสง */
+}
+
+/* เนื้อหาและรูปภาพใน popup */
+.popup-content {
+  position: relative;
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  transform: scale(0); /* เริ่มด้วยขนาดภาพเล็ก */
+  transition: transform 0.5s ease; /* การเปลี่ยนขนาดภาพที่ราบรื่น */
+}
+
+/* แสดง popup และขยายขนาดภาพ */
+.popup.show .popup-content {
+  transform: scale(1); /* ขยายภาพให้ขนาดปกติ */
+}
+
+/* สไตล์สำหรับคำอธิบายภาพ */
+#caption {
+  margin: 30px auto;
+  text-align: center;
+  color: #ffff; /* สีขาว */
+  font-size: 20px;
+  max-width: 90%; /* จำกัดความกว้างของคำอธิบายไม่ให้กว้างเกินไป */
+  overflow-wrap: break-word; /* จัดการคำยาว ๆ */
+  transform: translateY(-200px); /* ย้ายคำอธิบายลง */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* การเปลี่ยนแปลงการจางและการเลื่อนที่ราบรื่น */
+}
+
+.popup.show #caption {
+  opacity: 1; /* จางเข้ามาของคำอธิบาย */
+  transform: translateY(0); /* ย้ายคำอธิบายไปยังตำแหน่งปกติ */
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #f1f1f1; /* สีขาว */
+  font-size: 35px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังดำโปร่งแสง */
+  width: 50px; /* ความกว้างของปุ่ม */
+  height: 50px; /* ความสูงของปุ่ม */
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+  color: #bbb; /* สีเมื่อ hover หรือ focus */
+  background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลังเมื่อ hover หรือ focus */
+  text-decoration: none;
+}
+/* สไตล์สำหรับปุ่มนำทาง */
+.popup-prev, .popup-next {
+  position: absolute;
+  top: 50%;
+  width: 50px; /* ความกว้างของปุ่ม */
+  height: 50px; /* ความสูงของปุ่ม */
+  padding: 0; /* ปรับ padding ให้เป็น 0 */
+  margin-top: -25px; /* เลื่อนปุ่มขึ้นเล็กน้อยเพื่อให้ตรงกลาง */
+  color: #fff; /* สีขาว */
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังดำโปร่งแสง */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-prev {
+  left: 10px; /* ปรับตำแหน่งของปุ่ม prev */
+}
+
+.popup-next {
+  right: 10px; /* ปรับตำแหน่งของปุ่ม next */
+}
+
+.popup-prev:hover, .popup-next:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลังเมื่อ hover */
+}

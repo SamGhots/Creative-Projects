@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandbox - Modern & Multipurpose Tailwind CSS Template</title>
+    <!--style.css กําหนดพื้นฐานต่างๆของเว็ป-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-------------------------------------->
+    <!--container-boxcss กําหนดboxต่างๆ เช่น box text , box img-->
+    <link rel="stylesheet" href="css/container-box.css" />
+    <!-------------------------------------->
+    <!--media-screen กําหนดขนาดหน้าจอ -->
+    <link rel="stylesheet" href="css/media-screen.css" />
+    <!--popup เเสดงรูปภาพเต็มเมื่อกด -->
+    <link rel="stylesheet" href="css/popup.css" />
+    <!--navbar.css -->
+    <link rel="stylesheet" href="component/navbar/navbar.css" />
+    <!-------------------------------------->
+    <!--hero.css  เนื้อหานําเเสนอส่วนเเรกของเว็ป-->
+    <link rel="stylesheet" href="component/hero/hero.css" />
+    <!-------------------------------------->
+    <!--ideas.css  ต้นเเบบcode หลักพื้นฐานต่างๆของ  box ทั้งหมด-->
+    <link rel="stylesheet" href="component/ideas-box/ideas.css" />
+    <!-------------------------------------->
+    <link rel="stylesheet" href="component/concept-box/concept.css" />
+    <link rel="stylesheet" href="component/life-box/life.css" />
+    <link rel="stylesheet" href="component/workshop-box/workshop.css" />
+    <link rel="stylesheet" href="component/toys-box/toys.css" />
+    <!--footer.css  -->
+    <link rel="stylesheet" href="component/footer/footer.css" />
+    <!-------------------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <section class="header">
+      <a href="#"><img src="img/logo.png" alt="Logo" /></a>
+      <div>
+        <ul class="navbar">
+          <li>
+            <a href="#">Demos</a>
+            <i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown-menu">
+              <li><a href="#">Dropdown Item 1</a></li>
+              <li><a href="#">Dropdown Item 2</a></li>
+              <li><a href="#">Dropdown Item 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pages</a><i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown-menu">
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Utility</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">One Page</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Projects</a><i class="fa-solid fa-caret-down"></i>
+          </li>
+          <li><a href="#">Blog</a><i class="fa-solid fa-caret-down"></i></li>
+          <li><a href="#">Blocks</a><i class="fa-solid fa-caret-down"></i></li>
+          <li>
+            <a href="#">Documentation</a><i class="fa-solid fa-caret-down"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-other">
+        <p>EN <i class="fa-solid fa-caret-down"></i></p>
+        <button>Contact</button>
+
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </section>
+
+    <!-- hero -->
+    <section id="hero" class="section-p1">
+      <div class="he-container">
+        <h1>Check out some of our awesome projects with creative ideas.</h1>
+      </div>
+    </section>
+    <!-- ideas -->
+    <div class="container">
+      <div class="item item-1">
+        <div class="i-text">
+          <h3>IDEAS</h3>
+          <h2>Cras Fermentum Sem</h2>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <a href="">See Project</a>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="item item-2">
+        <div class="itembox">
+          <img
+            src="img/cs1.jpg"
+            alt=""
+            title="Cursus lnceptos Sit"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-3">
+        <div class="itembox">
+          <img
+            src="img/cs2.jpg"
+            alt=""
+            title="lpsum Egestas Porta"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-4">
+        <div class="itembox">
+          <img
+            src="img/cs3.jpg"
+            alt=""
+            title="Ultricies Cras Tortor"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+    <!-- Tooltip element  เมื่อนําเมาร์ไปชี้จะมีชื่อภาพขึ้นมาเเสดง-->
+    <!-- Popup Image เป็นสิ่งที่ซ้อนไว้ เมื่อกดรูปภาพจะขึ้นมา-->
+    <div id="popup" class="popup">
+      <span class="popup-close">&times;</span>
+      <span class="popup-prev">&#10094;</span>
+      <!-- Previous image button -->
+      <span class="popup-next">&#10095;</span>
+      <!-- Next image button -->
+      <img class="popup-content" id="popup-img" src="" alt="" />
+      <div id="caption"></div>
+    </div>
+
+    <!-- concept -->
+    <div class="container">
+      <div class="item item-1">
+        <div class="i-text concept">
+          <h3>CONCEPT</h3>
+          <h2>Vulputate Sollicitudin</h2>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <a href="">See Project</a><i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="item item-2">
+        <div class="itembox">
+          <img
+            src="img/cs4.jpg"
+            alt=""
+            title="Purus Tellus Magna"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-3">
+        <div class="itembox">
+          <img
+            src="img/cs5.jpg"
+            alt=""
+            title="Fusce lpsum Vestibulum"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-4">
+        <div class="itembox">
+          <img
+            src="img/cs6.jpg"
+            alt=""
+            title="Condimentum Parturient Ligula"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- STILL LIFE -->
+    <div class="container">
+      <div class="item item-1">
+        <div class="i-text sitll">
+          <h3>STILL LIFE</h3>
+          <h2>Vulputate Sollicitudin</h2>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <a href="">See Project</a><i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="item item-2">
+        <div class="itembox">
+          <img
+            src="img/cs7.jpg"
+            alt=""
+            title="Venenatis Amet lpsum"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-3">
+        <div class="itembox">
+          <img
+            src="img/cs8.jpg"
+            alt=""
+            title="Quam Vehicula Condimentum"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-4">
+        <div class="itembox">
+          <img
+            src="img/cs9.jpg"
+            alt=""
+            title="Commodo Fusce dapibus"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- workshop -->
+    <div class="container">
+      <div class="item item-1">
+        <div class="i-text workshop">
+          <h3>WORKSHOP</h3>
+          <h2>Ornare Commodo Mollis</h2>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <a href="">See Project</a><i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="item item-2">
+        <div class="itembox">
+          <img
+            src="img/cs10.jpg"
+            alt=""
+            title="Cras Ullamcorper Tellus"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-3">
+        <div class="itembox">
+          <img
+            src="img/cs11.jpg"
+            alt=""
+            title="Quam Bibendum Ornare"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-4">
+        <div class="itembox">
+          <img
+            src="img/cs12.jpg"
+            alt=""
+            title="Ullamcorper Etiam Malesuada"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLS & TOYS-->
+    <div class="container">
+      <div class="item item-1">
+        <div class="i-text toys">
+          <h3>TOOLS & TOYS</h3>
+          <h2>Porta Tortor Vulputate</h2>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <a href="">See Project</a><i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="item item-2">
+        <div class="itembox">
+          <img
+            src="img/cs13.jpg"
+            alt=""
+            title="Aenean Dolor Tristique"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-3">
+        <div class="itembox">
+          <img
+            src="img/cs14.jpg"
+            alt=""
+            title="Mangna lpsum Euismod"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+      <div class="item item-4">
+        <div class="itembox">
+          <img
+            src="img/cs15.jpg"
+            alt=""
+            title="Fusce Mollis"
+            class="popup-trigger"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- footer-->
+    <div class="footer-container" id="section-p1">
+      <div class="footer-main">
+        <div class="footer-box1">
+          <img src="img/logo-light.png" alt="" />
+          <p>© 2024 Sandbox.<br />All rights reserved.</p>
+          <div class="icon-footer">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+        <div class="footer-box2">
+          <h4>Get in Touch</h4>
+          <p>Moonshine St. 14/05 Light City, London, United Kingdom</p>
+          <a>info@email.com</a>
+          <p>00 (123) 456 7890</p>
+        </div>
+        <div class="footer-box3">
+          <h4>Learn More</h4>
+          <ul>
+            <li><a href="">About Us</a></li>
+
+            <li><a href="">Our Story</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-box4">
+          <h4>Our Newsletter</h4>
+          <p>
+            Subscribe to our newsletter to get our news & deals delivered to
+            you.
+          </p>
+          <div class="wrapper">
+            <input type="text" placeholder="Email Address" />
+            <button>Join</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--เกี่ยวกับ navbar คือ เมื่อ เลื่อนลงเเล้วจะมีnavbar ติดไปด้วย จะเเสดง navbar เมื่อ y > 50-->
+    <script src="js/navbar-sticky.js"></script>
+    <!-- เป็นส่วนเเสดง ชื่อภาพเมื่อเมาร์ไปชี้ที่ภาพ -->
+    <script src="js/tooltip.js"></script>
+    <!--เมื่อกด จะเเสดงรูปภาพเต็ม -->
+    <script src="js/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+/*ส่วนเนื้อหา sitll-life */
+.i-text.sitll h3 {
+  color: #70cec9;
+}
+
+.i-text.sitll a {
+  color: #70cec9;
+}
+
+.i-text.sitll i {
+  color: #70cec9;
+}
+
+/* life  อนิเมชั่น เส้นใต้  See Project*/
+.i-text.sitll a {
+  color: #70cec9;
+}
+
+.i-text.sitll a::before {
+  background-color: #70cec9;
+}

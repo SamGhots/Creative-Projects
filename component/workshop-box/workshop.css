@@ -1,0 +1,23 @@
+
+/*ส่วนเนื้อหา workshop */
+.i-text.workshop h3 {
+  color: #7db29e;
+}
+
+.i-text.workshop a {
+  color: #7db29e;
+}
+
+.i-text.workshop i {
+  color: #7db29e;
+}
+
+/* workshop  อนิเมชั่น เส้นใต้  See Project*/
+.i-text.workshop a {
+  color: #7db29e;
+}
+
+.i-text.workshop a::before {
+  background-color: #7db29e;
+}
+

@@ -1,0 +1,54 @@
+#hero{
+  display: grid;
+
+}
+.he-container{
+display: grid;
+justify-content: center;
+background-color: rgba(246, 247, 249, 1);
+  padding: 140px 15px;
+  border-radius: 10px;
+  
+}
+.he-container h1 {
+  text-align: center;
+
+  margin: 0;
+  max-width: 700px; /* กำหนดความกว้างสูงสุด */
+  word-wrap: break-word; /* ตัดคำและขึ้นบรรทัดใหม่ */
+  overflow-wrap: break-word; /* ตัดคำและขึ้นบรรทัดใหม่ */
+  font-weight: 700;
+  
+}
+
+
+
+@media (max-width:768px) {
+  .he-container h1{
+  font-size: 36px;
+  }
+
+  #hero{
+    background-color: rgba(246, 247, 249, 1);
+  }
+  
+}
+
+@media (max-width:618px) {
+  .he-container h1{
+    font-size: 32px;
+  
+  }
+
+  
+}
+@media (max-width:480px) {
+  .section-p1{
+    padding: 40px 20px;
+  }
+  
+  
+  
+
+  
+}

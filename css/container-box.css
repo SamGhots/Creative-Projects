@@ -1,0 +1,81 @@
+/*ไฟล์ css นี้ กําหนดขนาดต่างๆของ box container*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.container {
+  width: 80%;
+  margin: 0 auto;
+  border: 10px solid var(--clr-dark);
+  margin-bottom: 80px;
+}
+
+.item {
+  overflow: hidden; /* ป้องกันรูปภาพที่ขยายขนาดออกไปนอกพื้นที่ */
+  position: relative; /* ให้แน่ใจว่าการจัดตำแหน่งของรูปภาพถูกต้อง */
+  padding: 0.5em;
+  /*  background-color: #fb7185;*/
+
+  font-weight: 700;
+  color: var(--clr-light);
+  border: 10px solid var(--clr-accent);
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*กําหนดขนาด 6*6  คือขนาด box */
+.container {
+  display: grid;
+  grid-template-rows:1fr 1fr 1fr 1fr  1fr  1fr  ;
+  grid-template-columns:1fr 1fr 1fr 1fr  1fr  1fr ;
+}
+/*กําหนด ขนาด item ต่างๆ */
+.item-1{
+  grid-row-start: 1;
+  grid-row-end: 3;
+grid-column-start: 1;
+grid-column-end: 4;
+}
+
+.item-2{
+  grid-row-start: 1;
+  grid-row-end: 4;
+grid-column-start: 4;
+grid-column-end: 7;
+}
+
+.item-3{
+  grid-row-start: 3;
+  grid-row-end: 6;
+grid-column-start: 1;
+grid-column-end: 4;
+}
+.item-4{
+  grid-row-start: 4;
+  grid-row-end: 7;
+grid-column-start: 4;
+grid-column-end: 7;
+}
+/*กําหนด itembox เนื่องจาก เราจะกําหนด ขอบเขตความใหญ่ของรูปภาพ*/
+.itembox {
+  display: flex;
+  overflow: hidden; /* ซ่อนส่วนที่เกิน */
+  position: relative; /* ตั้งค่าการจัดตำแหน่ง */
+ 
+}
+
+.itembox img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* ป้องกันไม่ให้รูปใหญ่เกิน */
+  max-height: 450px; /* ตั้งค่าความสูงสูงสุดของรูปภาพ */
+  object-fit: cover; /* ให้รูปภาพไม่เสียสัดส่วน */
+  border-radius: 8px;
+cursor: pointer;
+transition: transform 0.5s ease; /* ทำให้การเปลี่ยนแปลงขนาดของรูปภาพนุ่มนวล */
+}
+.item img:hover{
+ transform: scale(1.1);
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/

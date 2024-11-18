@@ -1,0 +1,331 @@
+.footer-container {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  background-color: #21262c;
+  padding: 50px 0; /* เพิ่ม padding เพื่อให้มีพื้นที่รอบขอบของ footer */
+  margin-top: 80px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ปรับการจัดหน้ากริดให้ responsive */
+  gap: 30px; /* ระยะห่างระหว่างของข้อมูลใน footer */
+  max-width: 1200px; /* กำหนดความกว้างสูงสุดของ footer */
+  margin: 0 auto; /* จัดให้ footer อยู่กลางแนวนอน */
+  padding: 0 20px; /* เพิ่ม padding ด้านข้างของ footer */
+}
+
+.footer-box1 {
+  padding: 0;
+}
+.icon-footer {
+  display: flex;
+ gap: 25px
+ ;
+}
+
+.icon-footer i {
+  font-size: 18px; 
+  transition: transform 0.3s ease; 
+}
+
+.icon-footer i:hover {
+  transform: translateY(-3px); 
+}
+.footer-box1 i {
+ color: #ffffff;
+}
+
+.footer-box1 img {
+  margin-bottom: 20px; 
+}
+
+.footer-box1 p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #cfcfcf;
+}
+
+
+
+.footer-box2 {
+  padding: 0;
+}
+.footer-box2 p{
+  font-size: 16px;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+}
+.footer-box2 a {
+  font-size: 16px !important;
+  color: #cfcfcf !important;
+  transition: color 0.3s ease; 
+  text-decoration: none; 
+  margin-bottom: 20px;
+}
+
+.footer-box2 a:hover {
+  color: #0b63f0 !important; 
+}
+.footer-box2 h4 {
+  font-size: 19px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.footer-box2 .address {
+  font-size: 16px;
+  color: #60697B;
+  margin-bottom: 20px;
+  max-width: 255px; /* ปรับขนาดสูงสุดของ address */
+}
+
+.footer-box2 a {
+  font-size: 17px;
+  color: #60697B;
+  text-decoration: none;
+}
+
+.footer-box2 .number {
+  font-size: 17px;
+  color: #60697B;
+}
+
+
+
+
+.footer-box3 ul {
+  list-style: none; /* ลบจุดทั้งหมดในรายการ */
+  padding: 0; /* ลบช่องว่างข้างหน้ารายการ */
+}
+
+.footer-box3 ul li {
+  margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างรายการ */
+}
+
+.footer-box3 ul li a {
+  font-size: 16px;
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.footer-box3 ul li a:hover {
+  color: #0b63f0; /* เปลี่ยนสีของลิงก์เมื่อ hover */
+}
+
+.footer-box3 {
+  padding: 0;
+}
+
+
+
+
+
+.footer-box3 h4 {
+  font-size: 19px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.footer-box3 a {
+  font-size: 17px;
+  color: #60697B;
+  text-decoration: none;
+}
+
+.footer-box4 {
+  padding: 0;
+}
+
+.footer-box4 h4 {
+  font-size: 19px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.footer-box4 p {
+  font-size: 16px;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+}
+
+.footer-box4 button {
+  background-color: #a07cc5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+.footer-box4 button:hover {
+  background-color: #8755a1;
+}
+
+.footer-box4 input {
+  color: #60697B;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color:  #282d33;
+  border: 2px solid #383c42;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 3rem;
+}
+
+.footer-box4 input::placeholder {
+  color: #60697B;
+}
+
+.footer-box4 .wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 0px;
+ 
+}
+
+.footer-box4 .wrapper button {
+
+  background-color: #0b63f0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+}
+@media (max-width:1129px) {
+  .footer-main {
+  grid-template-columns: repeat(auto-fit, minmax(223px, 1fr));
+}
+}
+@media (max-width:1024px) {
+  .footer-main {
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ปรับการจัดหน้ากริดให้ responsive */
+    gap: 20px; /* ระยะห่างระหว่างของข้อมูลใน footer */
+    max-width: 1024px; /* กำหนดความกว้างสูงสุดของ footer */
+ 
+  }
+  .footer-box4 input {
+    font-size: 0.9rem;
+    height: 3rem;
+  }
+  .footer-box4 input::placeholder {
+    font-size: 10px;
+    padding-left: 1px; /* Adjust the left padding as needed */
+  }
+  .footer-box4 .wrapper button {
+    font-size: 10px;
+  }
+  .icon-footer i {
+    font-size: 18px; 
+    transition: transform 0.3s ease; 
+  }
+  .icon-footer {
+    display: flex;
+   gap: 18px
+   ;
+  }
+}
+
+@media (max-width:900px) {
+  .footer-main {
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ปรับการจัดหน้ากริดให้ responsive */
+    gap: 20px; /* ระยะห่างระหว่างของข้อมูลใน footer */
+    max-width: 900px; /* กำหนดความกว้างสูงสุดของ footer */
+ 
+  }
+  .footer-box4 input {
+    font-size: 0.9rem;
+    height: 3rem;
+  }
+  .footer-box4 input::placeholder {
+    font-size: 18px;
+    padding-left: 1px; /* Adjust the left padding as needed */
+  }
+  .footer-box4 .wrapper button {
+    font-size: 15px;
+  }
+  .icon-footer i {
+    font-size: 18px; 
+    transition: transform 0.3s ease; 
+  }
+  .icon-footer {
+    display: flex;
+   gap: 18px
+   ;
+  }
+}
+@media (max-width:660px) {
+  .footer-main {
+
+    grid-template-columns: repeat(auto-fit, minmax(274px, 1fr)); 
+ 
+ 
+  }
+}
+@media (max-width:600px) {
+  .footer-main {
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ปรับการจัดหน้ากริดให้ responsive */
+    gap: 20px; /* ระยะห่างระหว่างของข้อมูลใน footer */
+    max-width: 600px; /* กำหนดความกว้างสูงสุดของ footer */
+ 
+  }
+  .footer-box4 input {
+    font-size: 0.9rem;
+    height: 3rem;
+  }
+  .footer-box4 input::placeholder {
+    font-size: 18px;
+    padding-left: 1px; /* Adjust the left padding as needed */
+  }
+  .footer-box4 .wrapper button {
+    font-size: 15px;
+  }
+  .icon-footer i {
+    font-size: 18px; 
+    transition: transform 0.3s ease; 
+  }
+  .icon-footer {
+    display: flex;
+   gap: 18px
+   ;
+  }
+}
+
+@media (max-width:320px) {
+  .footer-main {
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ปรับการจัดหน้ากริดให้ responsive */
+    gap: 20px; /* ระยะห่างระหว่างของข้อมูลใน footer */
+    max-width: 320px; /* กำหนดความกว้างสูงสุดของ footer */
+ 
+  }
+  .footer-box4 input {
+    font-size: 0.9rem;
+    height: 3rem;
+  }
+  .footer-box4 input::placeholder {
+    font-size: 18px;
+    padding-left: 1px; /* Adjust the left padding as needed */
+  }
+  .footer-box4 .wrapper button {
+    font-size: 15px;
+  }
+  .icon-footer i {
+    font-size: 18px; 
+    transition: transform 0.3s ease; 
+  }
+  .icon-footer {
+    display: flex;
+   gap: 18px
+   ;
+  }
+}

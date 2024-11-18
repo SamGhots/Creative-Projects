@@ -1,0 +1,21 @@
+/*ส่วนเนื้อหา concept */
+.i-text.concept h3 {
+  color: #fab758;
+}
+
+.i-text.concept a {
+  color: #fab758;
+}
+
+.i-text.concept i {
+  color: #fab758;
+}
+
+
+/* CONCEPT อนิเมชั่น เส้นใต้  See Project*/
+.i-text.concept a {
+  color: #fab758;
+}
+.i-text.concept a::before {
+  background-color: #fab758;
+}

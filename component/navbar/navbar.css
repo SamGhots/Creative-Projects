@@ -1,0 +1,152 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  box-shadow: none; /* ปิดการใช้งานชั่วคราว */
+}
+
+.header.transparent {
+  background-color: rgba(225, 226, 226, 0.41);
+  
+  /* เปลี่ยนเป็นสีพื้นหลังที่คุณต้องการเมื่อเลื่อนลง */
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar li {
+  list-style: none;
+  position: relative;
+  /* เพิ่มเพื่อให้เมนูลอยลงทำงาน */
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #373f54;
+  padding-right: 5px;
+  position: relative;
+  /* เพิ่มเพื่อให้เมนูลอยลงทำงาน */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 3rem;
+  border-radius: 5px;
+  left: 0;
+  background-color: #fff;
+  /* สีพื้นหลังของเมนูลอยลง */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* เงาของเมนูลอยลง */
+  list-style: none;
+  padding: 20px;
+  display: none;
+  /* ซ่อนเมนูตั้งแต่ต้น */
+  z-index: 1000;
+  /* ให้เมนูลอยลงอยู่เหนือหัวข้ออื่น */
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  color: #373f54;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar li:hover .dropdown-menu {
+  display: block;
+  /* แสดงเมื่อโฮเวอร์ */
+}
+
+.navbar-other {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-other p {
+  color: #373f54;
+  margin-right: 5px;
+}
+
+.navbar-other button {
+  background: #3f78e0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+}
+
+
+.navbar li i {
+  color: #749de8;
+}
+
+.navbar li a:hover {
+  color: #749de8;
+}
+
+.navbar-other .fa-solid.fa-bars {
+  display: none;
+}
+
+
+@media (max-width:1024px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-other .fa-solid.fa-bars {
+    color: #373f54;
+    display: block;
+    font-size: 25px;
+  }
+
+  .navbar-other {
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 10px;
+
+  }
+  .navbar {
+    display: none;
+  }
+
+  .navbar-other .fa-solid.fa-bars {
+    display: block;
+    font-size: 25px;
+    color: #373f54;
+  }
+
+  .navbar-other {
+    gap: 20px;
+  }
+  .navbar-other button{
+    display: none;
+  }
+
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 20px 10px;
+
+  }
+  
+}
